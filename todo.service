@@ -1,0 +1,10 @@
+[Unit]
+Description = Todo Service
+[Service]
+User=todoapp
+Environment=REDIS_HOST=localhost
+ExecStart=/bin/node /home/todoapp/todo/server.js
+SyslogIdentifier=todo
+
+[Install]
+WantedBy=multi-user.target
